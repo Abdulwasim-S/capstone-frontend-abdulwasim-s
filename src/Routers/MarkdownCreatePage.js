@@ -84,7 +84,7 @@ const MarkdownCreatePage = () => {
             onBlur={handleBlur}
           />
           <br/>
-          {state}
+          <div className="text-warning">{state}</div>
           <br/>
             <button type="submit" className={`btn btn-success px-5 ${buttonState}`}>
               save
