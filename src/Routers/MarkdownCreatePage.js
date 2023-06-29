@@ -63,8 +63,6 @@ const MarkdownCreatePage = () => {
       <button className="mb-3 btn btn-warning" onClick={() => handleroute()}>
         Click to markdown list page
       </button>
-      <br/>
-      {state}
       <form className="text-start p-5" onSubmit={handleSubmit}>
         <div className="form-group text-center">
           <label for="markdownName">Markdown name</label>
@@ -85,6 +83,9 @@ const MarkdownCreatePage = () => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
+          <br/>
+          {state}
+          <br/>
             <button type="submit" className={`btn btn-success px-5 ${buttonState}`}>
               save
             </button>
