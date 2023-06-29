@@ -60,16 +60,17 @@ const MarkdownPage = () => {
           click to add new markdown
         </NavLink>
         <div
-          className="row pb-3 justify-content-between"
+          className=" pb-3 justify-content-between "
+          style={{width:"100%"}}
         >
           {tableColumn.length === 0 && (
-            <h3 className="text-muted">NO MARKDOWN HAVE CREATED</h3>
+            <h3 className="text-muted ">NO MARKDOWN HAVE CREATED</h3>
           )}
           <div className="row">
             {tableColumn.length > 0 && (
               <>
-                <input className="" placeholder="Search here by name..." type="text" onChange={(e)=>searchFilter((e.target.value).toLowerCase())}/>
-                <h4>Markdown List Table</h4><hr/>
+                <input className="m-3" placeholder="Search here by name..." type="text" onChange={(e)=>searchFilter((e.target.value).toLowerCase())}/>
+                <h4 className="text-success m-3">Markdown List Table</h4><hr/>
                 {tableColumn.map((ele,idx)=>(
                     <div className="card-container col-md-4 filter-card" id={(ele.name).toLowerCase()} >
                       <h5 className="text-start text-success">Name : <span className="text-dark">{ele.name}</span></h5>

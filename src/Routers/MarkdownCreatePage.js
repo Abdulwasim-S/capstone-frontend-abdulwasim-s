@@ -60,12 +60,12 @@ const MarkdownCreatePage = () => {
     <div className="">
       <HeadPage />
       <h1>Markdown Viewer</h1>
-      <button className="mb-3 btn btn-warning" onClick={() => handleroute()}>
+      <button className="mb-3 btn btn-success" onClick={() => handleroute()}>
         Click to markdown list page
       </button>
       <form className="text-start p-5" onSubmit={handleSubmit}>
-        <div className="form-group text-center">
-          <label for="markdownName">Markdown name</label>
+        <div className="form-group ">
+          <label for="markdownName text-start " >Markdown name</label>
           <input
             type="markdownName"
             className={`form-control my-2 ${
@@ -84,15 +84,17 @@ const MarkdownCreatePage = () => {
             onBlur={handleBlur}
           />
           <br/>
+          <div className="text-center">
           <div className="text-warning">{state}</div>
           <br/>
             <button type="submit" className={`btn btn-success px-5 ${buttonState}`}>
               save
             </button>
+          </div>
         </div>
         <div className="row mt-3">
           <div className="form-group col-md-6 mb-5 mt-1">
-            <label for="exampleInputPassword1">Markdown</label>
+            <label for="exampleInputPassword1">Markdown :</label>
             <textarea
               type="markdown"
               style={{ height: "80vh" }}
@@ -113,7 +115,7 @@ const MarkdownCreatePage = () => {
             />
           </div>
           <div className="col-md-6 mt-1">
-            <label className="mb-2">Output</label>
+            <label className="mb-2">Output :</label>
             <div className="border rounded" style={{ height: "80vh", overflowY: "auto" }}>
               <ReactMarkdown className="markdown p-3">
                 {values.markdown}
