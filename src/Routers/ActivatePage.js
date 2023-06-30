@@ -8,7 +8,7 @@ const ActivatePage = () => {
       email: localStorage["markdown-email"],
     };
     const response = await fetch(
-      "https://https://capstone-backend-abdulwasim-s.vercel.app/activation",
+      "https://capstone-backend-abdulwasim-s.vercel.app/activation",
       {
         method: "PUT",
         body: JSON.stringify(activationInfo),
