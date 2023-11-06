@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import HeadPage from "./HeadPage";
-import { Table } from "antd";
 
 const MarkdownPage = () => {
   const [tableColumn, setTableColumn] = useState([]);
@@ -24,7 +23,7 @@ const MarkdownPage = () => {
           const values = data.markdowns.map((ele, idx) => {
             return {
               name: ele.markdownName,
-              markdown:ele.markdown,
+              markdown: ele.markdown,
               key: idx,
             };
           });
@@ -39,11 +38,11 @@ const MarkdownPage = () => {
     }
     getUrlList();
   }, []);
-  function searchFilter(filterKey){
-    var boxes=document.getElementsByClassName('filter-card');
+  function searchFilter(filterKey) {
+    var boxes = document.getElementsByClassName("filter-card");
     for (var i = 0; i < boxes.length; i++) {
       var box = boxes[i];
-      if ((box.id).includes(filterKey)) {
+      if (box.id.includes(filterKey)) {
         box.style.display = "block";
       } else {
         box.style.display = "none";
@@ -61,7 +60,7 @@ const MarkdownPage = () => {
         </NavLink>
         <div
           className=" pb-3 justify-content-between "
-          style={{width:"100%"}}
+          style={{ width: "100%" }}
         >
           {tableColumn.length === 0 && (
             <h3 className="text-muted ">NO MARKDOWN HAVE CREATED</h3>
@@ -69,13 +68,24 @@ const MarkdownPage = () => {
           <div className="row">
             {tableColumn.length > 0 && (
               <>
-                <input className="m-3" placeholder="Search here by name..." type="text" onChange={(e)=>searchFilter((e.target.value).toLowerCase())}/>
-                <h4 className="text-success m-3">Markdown List Table</h4><hr/>
-                {tableColumn.map((ele,idx)=>(
-                    <div className="card-container col-md-4 filter-card" id={(ele.name).toLowerCase()} >
-                      <h5 className="text-start text-success">Name : <span className="text-dark">{ele.name}</span></h5>
-                      <textarea value={ele.markdown}/>
-                    </div>
+                <input
+                  className="m-3"
+                  placeholder="Search here by name..."
+                  type="text"
+                  onChange={(e) => searchFilter(e.target.value.toLowerCase())}
+                />
+                <h4 className="text-success m-3">Markdown List Table</h4>
+                <hr />
+                {tableColumn.map((ele, idx) => (
+                  <div
+                    className="card-container col-md-4 filter-card"
+                    id={ele.name.toLowerCase()}
+                  >
+                    <h5 className="text-start text-success">
+                      Name : <span className="text-dark">{ele.name}</span>
+                    </h5>
+                    <textarea value={ele.markdown} />
+                  </div>
                 ))}
               </>
             )}
