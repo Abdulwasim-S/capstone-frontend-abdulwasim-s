@@ -9,7 +9,7 @@ const NavBarComp = () => {
     <Navbar expand="lg" className='p-3' style={{borderBottom:"2px solid black"}} bg={mode==="dark"?"dark":""}>
       <Container>
         <Navbar.Brand className={'pl-6 pr-10 text-'+textMode} href="#home"><h2>Abdulwasim S</h2></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" ><i class={"fa-solid fa-bars text-"+textMode}/></Navbar.Toggle>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" ><i className={"fa-solid fa-bars text-"+textMode}/></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-end">
             <Nav.Link className={'active mx-3 text-'+textMode} href="#about">About</Nav.Link>
