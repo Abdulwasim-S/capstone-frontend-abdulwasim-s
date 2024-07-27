@@ -1,0 +1,123 @@
+.banner-page{
+    background-image: url("https://i.pinimg.com/originals/4c/44/39/4c443992f6106654fc270b3ca708d29e.png");
+    width: 100%;
+    height: 40vh;
+    background-position: center;
+    background-position-x: right;
+}
+.profile{
+    height:60vh;
+    margin: 7vh 20vh;
+    border-radius: 50px;
+    border-left: 5px solid white;
+    border-top: 5px solid white;
+    border-right: 5px solid gray;
+    border-bottom: 5px solid gray;
+}
+.about-page{
+    margin: 20px;
+    padding-left: 30%;
+    text-align: start;
+}
+.objective{
+    font-size: 20px;
+    font-weight: 150;
+}
+.heading{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: sans-serif;
+  }
+
+.logo-img{
+    height: 100px;
+  }
+  .logo-slider{
+    display: flex;
+    justify-content: space-evenly;
+    animation: 10s slider infinite linear;
+  }
+  .logo-img{
+    margin-right: 25px;
+  }
+  .slider-track{
+    display: flex;
+    overflow: hidden;
+    margin: 7% 7% 0 7%;
+  }
+  @keyframes slider {
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+  }
+  .card{
+    padding: 5%;
+    margin-bottom: 30px;
+  }
+  .card-img{
+    overflow: hidden;
+  }
+  .card-img-top{
+    transition: 0.5s;
+  }
+  .card-img-top:hover{
+    scale: calc(1.1);
+  }
+  .btn-row{
+    display: flex;
+    justify-content: space-around;
+  }
+  .btn{
+    white-space: nowrap;
+  }
+  .contact{
+    padding-left: 40% ;
+  }
+@media only screen and (max-width:900px) {
+    .banner-page{
+        background-image: url("https://www.topsinfosolutions.com/wp-content/uploads/2019/01/react-js-web-bg.jpg");
+        width: 100%;
+        height: 35vh;
+        background-position: center;
+        display: flex;
+        flex-direction: column;align-items: center;
+        background-position-x: center;
+    }
+    .profile{
+        height:40vh;
+        margin: 50px;
+        border-radius: 30px;
+        border-left: 5px solid white;
+        border-top: 5px solid white;
+        border-right: 5px solid gray;
+        border-bottom: 5px solid gray;
+    }
+    .about-page{
+        margin-top: 15vh;
+        padding: 0;
+        text-align: center;
+    }
+    .logo-img{
+    margin-right:0;
+  }
+  .objective{
+    font-size: 17px;
+    font-weight: 150;
+  }
+  .heading{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: sans-serif;
+  }
+  .btn-row{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact{
+    padding-left: 20% ;
+  }
+}
+  
