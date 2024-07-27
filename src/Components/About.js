@@ -42,7 +42,7 @@ const About = () => {
               </p>
               <a
                 className="text-decoration-none"
-                href="https://drive.google.com/file/d/1RXujIIVjVxopLqGkAWqLlSy_tncvuqrt/view?usp=sharing"
+                href="https://drive.google.com/file/d/1KfLH1607ENEsr7yf2GuPikv2KcLnLwEX/view?usp=sharing"
                 rel="noreferrer"
                 target="_blank"
               >
